@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.comment {
+   display: inline;
+   font-family: Arial, Helvetica, system-ui;
+}
+
+</style>
+
+
+	<div col >
+  <div row>
+<p>
+  <strong>Name:</strong>
+  <%= @event.name %>
+</p>
+</div>
+<div col>
+<p>
+  <strong>start Date:</strong>
+  <%= @event.start_date %>
+</p>
+<p>
+  <strong>end Date:</strong>
+  <%= @event.end_date %>
+</p>
+</div>
+<p>
+  <strong>Number:</strong>
+  <%= @event.number %>
+</p>
+
+  </div>
+
+<div id="comment">
+<h2>Add a comment:</h2>
+<%= form_with(model: [ @event, @event.cmts.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :commenter %><br>
+    <%= form.text_field :commenter %>
+  </p>
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+
+<h2>Comments</h2>
+<% @event.cmts.each do |cmt| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= cmt.commenter %>
+  </p>
+ 
+  <p>
+    <strong>Comment:</strong>
+    <%= cmt.body %>
+  </p>
+<% end %>
+
+</div>  
