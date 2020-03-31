@@ -5,7 +5,7 @@ require 'rails_helper'
 
 
 	describe "GET index" do
-    it "assigns @teams" do
+    it "assigns @events" do
       team = Event.create
       get :index
       expect(assigns(:events)).to eq([event])
