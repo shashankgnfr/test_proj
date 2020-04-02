@@ -1,5 +1,12 @@
 module ApplicationHelper
+
+
   def page_title
-    true
+    "RSpec is your friend"
+  end
+
+
+  def app_name
+    "The App: This Event"
   end
 end

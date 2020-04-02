@@ -24,8 +24,7 @@
 #   end
 # end
 
-# require 'spec_helper'
-require "rails_helper"
+require 'spec_helper'
 
 # describe 'events/show.html.erb' do
 #   it 'displays product details correctly' do
@@ -56,8 +55,8 @@ require "rails_helper"
 # end
 # end
 
-# RSpec.describe "events/index" do
-#   it "displays all the widgets" do
+# RSpec.describe "events/show" do
+#   it "displays the given event" do
 #     assign(:events, [
 #       Event.create!(:name => "slicers", :number => 7, :start_date => "2020-03-31 12:02:49", :end_date => "2020-03-31 12:02:49" ),
 #       Event.create!(:name => "dicers", :number => 7, :start_date => "2020-03-31 12:02:49", :end_date => "2020-03-31 12:02:49" )
@@ -67,23 +66,5 @@ require "rails_helper"
 
 #     expect(rendered).to match /slicers/
 #     expect(rendered).to match /dicers/
-#   end
-# end
-
-
-
-
-# RSpec.describe EventsController, :type => :controller do
-#   describe "index" do
-#     it "renders the index template" do
-#       get :index
-#       expect(response).to render_template("index")
-#       expect(response.body).to eq ""
-#     end
-#     it "renders the events/index template" do
-#       get :index
-#       expect(response).to render_template("events/index")
-#       expect(response.body).to eq ""
-#     end
 #   end
 # end

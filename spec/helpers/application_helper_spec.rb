@@ -1,9 +1,16 @@
-# require "rails_helper"
+require "rails_helper"
 
-# describe ApplicationHelper do
-#   describe "#page_title" do
-#     it "returns true" do
-#       helper.page_title.should be_true
-#     end
-#   end
-# end
+RSpec.describe ApplicationHelper, :type => :helper do
+  describe "#page_title" do
+    it "returns the default title" do
+      expect(helper.page_title).to eq("RSpec is your friend")
+    end
+  end
+
+  describe "#app_name" do
+    it "includes the app name" do
+      assign(:name, "This Event")
+      expect(helper.app_name).to eq("The App: This Event")
+    end
+  end
+end

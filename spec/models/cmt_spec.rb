@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Cmt, type: :model do
-  subject { Cmt.new(commenter: "nil", body: "test body", event_id: 4)}
+  subject { Cmt.new( commenter: "nil", body: "test body", event_id: 4)}
   before { subject.save}
 
 	it "name should be present" do
@@ -31,5 +31,17 @@ RSpec.describe Cmt, type: :model do
 	end	
 
 
+  it "has none to begin with" do
+    expect(Cmt.count).to eq 0
+  end
+
+
+  it "has none after one was created in a previous example" do
+    expect(Cmt.count).to eq 0
+  end
+
+  it "has one after adding one" do
+    instance_double("Cmt", :commenter => "shashank")
+  end
 
 end

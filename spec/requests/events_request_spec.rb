@@ -35,4 +35,13 @@ RSpec.describe EventsController, :type => :controller do
     end
   end
 
+
+  # render_views
+  # describe "GET index" do
+  #   it "has a widgets related heading" do
+  #     get :index
+  #     expect(response.body).to match /<h1>.*events/im
+  #   end
+  # end
+
 end
